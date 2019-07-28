@@ -1,0 +1,21 @@
+{% extends  'happx/base.html'%}
+
+
+{% block content %}
+
+<h1> Please Register Here</h1>
+
+<form method="POST">
+    <table>
+
+
+  <tr>
+    {% csrf_token %}
+        <tr><td>   {{ form.as_p }}</td></tr> {{ error_message }}
+    <tr><td><input type="submit"  value=" submit " style="font-size:15pt;color:white;background-color:green;border:2px solid #336600;padding:3px"></td></tr>
+  </table>
+     </li>
+    </ul>
+     </form>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+    background-image: url('/static/happx/images/doc.jpg');
+    background-size:120%,90%;
+     background-repeat: no-repeat;
+}
+
+h1{
+    color:black;
+    text-align: center;
+    font-family: "sans-serif";
+}
+
+.jumbotron{
+   background-position: center;
+    background-size: cover;
+
+}
+.log {
+    display: inline-block;
+    padding: 30px 140px;
+
+    width: 100%;
+    padding: 50px 0px 0px 890px;
+}
+.contacts{
+    color:black;
+}
+form{
+    float: right;
+}
+
+
+
+

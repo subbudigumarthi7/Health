@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartHealth</title>
+
+
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static "happx\css\mystyle.css" %}">
+
+</head>
+<body>
+<style>
+    footer {
+  background-color: #777;
+  padding: 0px;
+  text-align: center;
+  color: white;
+   position: fixed;
+        bottom: 0;
+        left: 0;
+         width: 100%;
+}
+    .alignleft{
+        float: left;
+    }
+    .alignright{
+    float:right;
+    }
+</style>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href={% url 'smart' %}>ISmart</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href={% url 'index' %}>Home</a></li>
+          <li><a href={% url 'about' %}>ABOUT</a></li>
+        <li><a href={% url 'contact' %}>CONTACT</a></li>
+
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href={% url  'register' %}><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href={% url 'auth_login' %}><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<div class="container">
+    {% block content %}
+
+{% endblock %}
+</div>
+
+</body>
+
+<footer>
+    <p class="alignleft">© 2019 mande</p>
+<p class="alignright">Posted by: subbu Chowdary</p>
+</footer>
+
+</html>

@@ -1,0 +1,26 @@
+{% extends 'happx/base.html' %}
+{% block content %}
+
+<h1> Please login Here!</h1>
+{% if error_message %}
+    <p class="bg-danger p-d ml-b">{{ error_message }}</p>
+ {% endif %}
+
+<div class="log">
+<form action="{% url 'auth_login' %}" method="post">
+<ul><li>
+     <table>
+     {% csrf_token %}
+         <tr><td> <b>username:</b> {{ form.username }} </td></tr><br>
+         <tr><td> <b> password:</b>{{ form.password }}</td></tr><br>
+
+        <tr><td><input type="submit"  value=" submit " style="font-size:15pt;color:white;background-color:green;border:2px solid #336600;padding:3px"></td></tr>
+         </table>
+</li>
+    </ul>
+</form>
+
+
+
+</div>
+{% endblock %}

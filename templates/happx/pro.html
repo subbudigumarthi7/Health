@@ -1,0 +1,11 @@
+{% extends 'happx/base.html' %}
+{% block content %}
+   <h3> Please Fill the Form </h3>
+     <form method="post">
+    {% csrf_token %}
+    {{ pform.as_p }}
+    <input type="button" value="submit">
+    </form>
+
+
+{% endblock %}
